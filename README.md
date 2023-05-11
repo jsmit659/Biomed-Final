@@ -1,4 +1,4 @@
-# Biomed-Final
+# Biomed Final Project
 
 ### Hardware Used:
 
@@ -34,21 +34,15 @@ DenseNet has several variants, including DenseNet-121, DenseNet-169, DenseNet-20
 In summary, DenseNet is a powerful neural network architecture that promotes feature reuse, mitigates the vanishing gradients problem, and enhances the representation power of the network. Its dense connectivity concept and stacked dense blocks make it an effective solution for various computer vision tasks.
 
 ### Introduction to Project
-Multiple sclerosis (MS) is a chronic autoimmune dis-
-ease that affects the central nervous system, including the
-brain, spinal cord, and optic nerves. The disease is character-
-ized by the body’s immune system attacking the myelin sheath,
-a protective covering that surrounds nerve fibers, resulting in
-inflammation, scarring, and damage to the nerves. MS can
-cause a wide range of symptoms, including muscle weakness,
-numbness, tingling, fatigue, difficulty with coordination and
-balance, and vision problems.
+Multiple sclerosis (MS) is a chronic autoimmune disease that affects the central nervous system, including the
+brain, spinal cord, and optic nerves. The disease is characterized by the body’s immune system attacking the myelin sheath,
+a protective covering that surrounds nerve fibers, resulting in inflammation, scarring, and damage to the nerves. MS can cause a wide range of symptoms, including muscle weakness, numbness, tingling, fatigue, difficulty with coordination and balance, and vision problems. Below is a visual aide of what MS does to the neurons of the body. 
 
-MS can have a significant impact on a person’s quality
-of life and ability to carry out daily activities, as the symptoms
-can be debilitating and unpredictable. The course of the
-disease is unpredictable, and the severity of symptoms can vary
-widely among individuals, making it challenging to diagnose
+![image](https://github.com/jsmit659/Biomed-Final/assets/113131600/c975dc74-91da-4aac-a900-93437a277668)
+
+
+MS can have a significant impact on a person’s quality of life and ability to carry out daily activities, as the symptoms
+can be debilitating and unpredictable. The course of the disease is unpredictable, and the severity of symptoms can vary widely among individuals, making it challenging to diagnose
 and treat.
 
 Artificial intelligence (AI) has the potential to aid
@@ -77,7 +71,7 @@ the project choice was obvious
 
 
 ### Augment Images
-First, the file paths are appended with a label for later classification. The following code block shows how these images are labeled and aumented to 224x224x3 
+First, the file paths are appended with a label for later classification. The following code block shows how these images are labeled and aumented to 224x224x1 
 ```python
 path = 'FILE_PATH'
 for f in glob.iglob(path):
@@ -141,12 +135,7 @@ history = full_model.fit(X_train, y_train, batch_size=8, epochs=200, validation_
 This model produced suprising results with 99% Accuracy and 93.4% Validation Accuracy. While the accuracy was promising, the Validaiton Loss never got below 0.2160 loss. The Accuracy and Loss curves are shown below along with the confusion matrix and accuracy metrics. 
 
 ![download](https://github.com/jsmit659/Biomed-Final/assets/113131600/5fafc214-40ed-4bba-a97f-2f2ec1f9270d)
-
-![Screenshot from 2023-05-10 18-44-47](https://github.com/jsmit659/Biomed-Final/assets/113131600/14e45d8e-bec1-4194-bde1-9bf403c66da0)
-
-![download](https://github.com/jsmit659/Biomed-Final/assets/113131600/d440b72e-b878-496b-8170-1cf056dca503)
-
-
+![Screenshot from 2023-05-10 19-54-32](https://github.com/jsmit659/Biomed-Final/assets/113131600/cae5e21f-4356-4a52-b152-d1dedb2c6ea1)
 
 ### DenseNET Model
 In addition of the VGG19 model, DenseNET was also explored. This model produced much better results with lower validation loss and slightly better validation loss, achieving a high of 95.08% validation accuracy and 0.1577 validation loss. 
@@ -194,10 +183,9 @@ history = full_model.fit(X_train, y_train, batch_size=8, epochs=150, validation_
 ```
 Below are the Accuracy and Loss curves, along with the confusion matrix and accuracy metrics. 
 
-![download](https://github.com/jsmit659/Biomed-Final/assets/113131600/744bbdb7-b1af-4034-ab8b-cab8be67d869) | ![download](https://github.com/jsmit659/Biomed-Final/assets/113131600/6f53d3dd-cbd4-4edb-8aca-9e5549068c3c)
-![download](https://github.com/jsmit659/Biomed-Final/assets/113131600/ee73971e-b229-4a21-8bff-1247b239ca76)
+![Screenshot from 2023-05-10 19-34-12](https://github.com/jsmit659/Biomed-Final/assets/113131600/621b288c-3f61-46af-8bcd-8b43e5cf05b9)
 
-![Screenshot from 2023-05-10 18-54-12](https://github.com/jsmit659/Biomed-Final/assets/113131600/889e3afb-987b-452d-894e-c507c0c1c239)
+![Screenshot from 2023-05-10 19-59-13](https://github.com/jsmit659/Biomed-Final/assets/113131600/65f58650-3475-4038-832d-acde97bcb42c)
 
 ### Checking Results 
 From the code block below, we can import the saved .h5 file from our model and check the results. This block will choose an image file at random and display the image, file path, and prediction. This way, one can visually check the accuracy of the model. 
@@ -243,8 +231,6 @@ print('Chosen file path:', chosen_path)
 print('Predicted class:', predicted_class_name)
 
 ```
+Below is an example of the manual checking. 
 
-## Basic Steps to recreate the project
-
-1. Augment and label images to 224x224x1
-2. 
+![Screenshot from 2023-05-10 19-44-44](https://github.com/jsmit659/Biomed-Final/assets/113131600/bd97cfa6-6e36-4177-ac44-22e4f1ea6bb6)
