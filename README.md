@@ -138,7 +138,7 @@ This model produced suprising results with 99% Accuracy and 93.4% Validation Acc
 ![Screenshot from 2023-05-10 19-54-32](https://github.com/jsmit659/Biomed-Final/assets/113131600/cae5e21f-4356-4a52-b152-d1dedb2c6ea1)
 
 ### DenseNET Model
-In addition of the VGG19 model, DenseNET was also explored. This model produced much better results with lower validation loss and slightly better validation loss, achieving a high of 95.08% validation accuracy and 0.1577 validation loss. 
+In addition of the VGG19 model, DenseNET was also explored. This model produced much better results with lower validation loss and slightly better validation accuracy, achieving a high of 95.08% validation accuracy and 0.1577 validation loss. 
 ```python
 # define the input tensor
 input_tensor = keras.layers.Input(shape=(224,224,3))
